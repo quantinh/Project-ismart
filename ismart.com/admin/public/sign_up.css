@@ -1,0 +1,60 @@
+/* Form-signs-up */
+body {
+    font-size: 12px;
+    font-family: arial;
+    line-height: 23px;
+    background: #029ef3;
+}
+h1.page-title{
+    font-size: 18px;
+    padding: 8px 0;
+    font-weight: 500;
+}
+#wp-form-reg{
+    width:285px;
+    background:#fdfdfd;
+    border-radius:5px;
+    padding: 20px;
+    margin:150px auto;
+    text-align: center;
+}
+#form_reg, #fullname, #username, #email, #password, #gender {
+    display: inline;
+    width: 100%;
+    padding: 12px 5px;
+    border: none;
+    margin: 10px 0; 
+    margin-bottom:15px;
+    background: #f7f7f7;
+}
+#btn_reg {
+    padding: 10px 0px ;
+    margin: 15px 0px;
+    display:inline;
+    padding:9px 10px;
+    text-align: center;
+    background: #029ef3;
+    color: #fff;
+    border:none;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+select {
+    padding:6px 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #dedede;
+    width:30%;
+}
+p.error {
+    color: rgb(245, 88, 88);
+    font-size: 12px;
+}
+p.success {
+    color:#ddb01ae3;
+}
+#lost-pass {
+    color: #67a0b7;
+    text-decoration: underline;
+}

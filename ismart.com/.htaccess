@@ -1,0 +1,48 @@
+#Bật chế độ viết lại link thân thiện cho người dùng(friendly)
+RewriteEngine On
+
+#Users(Người dùng đăng nhập)
+RewriteRule ^dang-ky.html$ ?mod=users&controller=index&action=index
+RewriteRule ^dang-nhap.html$ ?mod=users&controller=index&action=login
+RewriteRule ^doi-mat-khau-thanh-cong.html$ ?mod=users&controller=index&action=resetSuccess
+RewriteRule ^kiem-tra-email.html$ ?mod=users&controller=index&action=checkEMail
+RewriteRule ^lay-lai-mat-khau.html$ ?mod=users&controller=index&action=reset&reset_token
+RewriteRule ^thoat.html$ ?mod=users&controller=index&action=logout
+RewriteRule ^thong-tin-chi-tiet.html$ ?mod=users&controller=index&action=detail
+
+#Home(Trang chủ)
+RewriteRule ^trang-chu.html$ ?mod=home&controller=index&action=index
+RewriteRule ^tim-kiem.html$ ?mod=home&controller=index&action=search_products
+RewriteRule ^loc-([a-zA-Z0-9_-]+).html$ ?mod=home&controller=index&action=search_filter&value=$1
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+)-b.html$ ?mod=home&controller=index&action=buy_now&product_id=$2&slug=$1
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+)-or.html$ ?mod=home&controller=index&action=order&product_id=$2
+
+#Products(Danh sách sản phẩm hiện tại)
+RewriteRule ^san-pham.html$ ?mod=products&controller=index&action=index
+RewriteRule ^([a-zA-Z0-9_-]+).html/page=([0-9]+)$ ?mod=products&controller=index&action=index&page=$2
+RewriteRule ^danh-muc/([a-zA-Z0-9_-]+)-([0-9]+).html$ ?mod=products&controller=index&action=cat_product&cat_id=$2&slug=$1
+RewriteRule ^danh-muc/danh-muc-san-pham.html$ ?mod=products&controller=index&action=cat_product
+RewriteRule ^danh-muc/([a-zA-Z0-9_-]+).html/page=([0-9]+)$ ?mod=products&controller=index&action=cat_product&page=$2
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+)-i.html$ ?mod=products&controller=index&action=detail_product&product_id=$2&slug=$1
+
+#Pages(Danh sách trang)
+RewriteRule ^gioi-thieu.html$ ?mod=pages&controller=index&action=about
+RewriteRule ^lien-he.html$ ?mod=pages&controller=index&action=contact
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+).html$ ?mod=pages&controller=index&action=about&page_id=$2&slug=$1
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+).html$ ?mod=pages&controller=index&action=contact&page_id=$2&slug=$1
+
+#Posts(Danh sách bài viết)
+RewriteRule ^bai-viet.html$ ?mod=posts&controller=index&action=index
+RewriteRule ^([a-zA-Z0-9_-]+).html&page=([0-9]+)$ ?mod=posts&controller=index&action=index&page=$2
+RewriteRule ^bai-viet/([a-zA-Z0-9_-]+)-([0-9]+).html$ ?mod=posts&controller=index&action=detail_blog&post_id=$2
+
+#Cart(Giỏ hàng thanh toán)
+RewriteRule ^gio-hang.html$ ?mod=carts&controller=index&action=index
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+)-c.html$ ?mod=carts&controller=index&action=add_cart&product_id=$2&slug=$1
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+)-d.html$ ?mod=carts&controller=index&action=delete_cart&product_id=$2
+RewriteRule ^xoa-tat-ca.html$ ?mod=carts&controller=index&action=delete_all
+RewriteRule ^thanh-toan.html$ ?mod=carts&controller=index&action=checkout
+RewriteRule ^dat-hang.html$ ?mod=carts&controller=index&action=order
+
+
+

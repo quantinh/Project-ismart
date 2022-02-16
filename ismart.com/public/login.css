@@ -1,0 +1,80 @@
+body {
+    font-size: 14px;
+    font-family:arial;
+    line-height: 23px;
+    background: #029ef3;
+}
+#wp-form-login {
+    width:265px;
+    background:#fdfdfd;
+    border-radius:5px;
+    padding:30px 20px 20px 20px;
+    margin:150px auto;
+    text-align: center;
+}
+#form-login #username, #form-login #password {
+    display: block;
+    padding:10px 10px;
+    width: 100%;
+    border: none;
+    margin-bottom:9px;
+    background: #f7f7f7;
+}
+#fullname, #email {
+    display: block;
+    padding:10px 10px;
+    width: 100%;
+    border: none;
+    margin-bottom:9px;
+    background: #f7f7f7;
+}
+#form-login #btn-login {
+    display: block;
+    width:100%;
+    background:#029ef3;
+    border:none;
+    color:#fff;
+    padding: 10px 0px;
+    margin: 15px 0px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#lost-pass {
+    font-size: 13px;
+    color: #67a0b7;
+    text-decoration: underline;
+}
+#reg-pass{
+    font-size: 13px;
+    color: #67a0b7;
+    text-decoration: underline;
+}
+h1.page-title {
+    font-size:18px;
+    padding: 0px 0px 20px;
+}
+p.error {
+    color: rgb(245, 88, 88);
+    font-size: 12px; 
+}
+#checkbox {
+    font-size: 10px;
+}
+#remember_me {
+    margin-left: -94px;
+}
+label {
+    font-size:12px;
+}
+.no_reg {
+    margin-right:0.5rem;
+}
+.color-text {
+    color:#20a435;
+    font-weight: 600;
+    padding: 15px 0 15px 0;
+}
+.color-link {
+    color: rgb(245, 88, 88);
+    text-decoration: underline;
+}
